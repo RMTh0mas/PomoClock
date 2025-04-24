@@ -1,5 +1,5 @@
 :root {
-    --color-primary: #123456;
+    --color-primary: #ff6347;
     --color-secondary: #FFF;
     --azul-royal: #ff6347;
     --fundo-card-timer: rgba(240, 248, 255, 0.181);
@@ -174,7 +174,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2.8rem 6rem;
     justify-content: center;
     align-items: center;
-    background: #010B15;
+    background: #01080E;
 }
 
 .app__footer-text {
@@ -268,7 +268,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .app__logo-figure{
-        margin-top: 3em;
+        margin-top: 0em;
+        padding: 0;
         align-items: center;
     }
 
