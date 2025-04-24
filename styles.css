@@ -31,6 +31,8 @@
 * {
     box-sizing: border-box;
     max-width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 html {
@@ -250,11 +252,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Para Celulares */
 @media (max-width: 767px) {
+
     .app__section-banner-container {
-        width: 32rem;
+        display: block;
+        width: 40rem;
     }
 
     .app__title {
+        padding: 0 1em;
         font-size: 2.6rem;
     }
 
@@ -263,6 +268,12 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .app__logo-figure{
-        height: 20rem;
+        margin-top: 3em;
+        align-items: center;
     }
+
+    .app__logo-image {
+        height: 15em;
+    }
+
 }
