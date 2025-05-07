@@ -41,16 +41,6 @@ html {
     font-size: 10px;
 }
 
-body {
-    min-height: 100vh;
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 .app {
     min-height: 100vh;
     padding-top: env(safe-area-inset-top);
