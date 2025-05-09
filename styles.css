@@ -1,31 +1,31 @@
 :root {
-    --color-primary: #ff6347;
+    --color-primary: #EF4444;
     --color-secondary: #FFF;
-    --azul-royal: #ff6347;
-    --fundo-card-timer: rgba(240, 248, 255, 0.181);
-    --lils: #ff6347;
-    --linear-botes: linear-gradient(180deg, #ff6347 0%, #ddaaa1 100%);
+    --red: #EF4444;
+    --fundo-card-timer:  rgba(68, 62, 62, 0.8);
+    --lils: #EF4444;
+    --linear-botes: linear-gradient(180deg, #EF4444 0%, #ddaaa1 100%);
 }
 
 [data-contexto="foco"] {
-    --main-bg-color: linear-gradient(180deg, #ff6347 0%, #462019 48.44%, #01080E 100%);
-    --azul-royal: #ff6347;
-    --lils: #ff6347;
-    --linear-botes: linear-gradient(180deg, #ff6347 0%, #ddaaa1 100%);
+    --main-bg-color: linear-gradient(to top, #EF4444 0%, #991B1B 48.44%, #01080E 100%);
+    --red: #EF4444;
+    --lils: #EF4444;
+    --linear-botes: #EF4444;
 }
 
 [data-contexto="descanso-curto"] {
-    --main-bg-color: linear-gradient(180deg, #0F725C 0%, #041832 48.44%, #01080E 100%);
-    --azul-royal: #0F725C;
+    --main-bg-color: linear-gradient(to top, #0F725C 0%, #043220 48.44%, #01080E 100%);
+    --red: #0F725C;
     --lils: #0F725C;
-    --linear-botes: linear-gradient(180deg, #0F725C 0%, #ddaaa1 100%);
+    --linear-botes: #0F725C;
 }
 
 [data-contexto="descanso-longo"] {
-    --main-bg-color: linear-gradient(180deg, #1875E9 0%, #041832 48.44%, #01080E 100%);
-    --azul-royal: #1875E9;
-    --lils: #1875E9;
-    --linear-botes: linear-gradient(180deg, #1875E9 0%, #ddaaa1 100%);
+    --main-bg-color: linear-gradient(to top, #1A4980 0%, #0D2B4E 48.44%, #01080E 100%);
+    --red: #2563EB;
+    --lils: #2563EB;
+    --linear-botes: #2563EB;
 }
 
 * {
@@ -47,6 +47,8 @@ html {
     padding-bottom: env(safe-area-inset-bottom);
     background-position: center;
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -56,12 +58,13 @@ h1, h2, h3, h4, h5, h6 {
 .app__logo-figure {
     display: flex;
     justify-content: center;
-    padding: 2rem 0;
+    padding: 5rem 0 2rem 0;
     height: 20rem;
 }
 
 .app__section-banner-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -70,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .app__title {
     line-height: 150%;
-    font-size: 5.2rem;
+    font-size: 4.2rem;
     font-style: normal;
     color: var(--color-secondary);
     font-weight: 200; 
@@ -81,6 +84,11 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
+.title-icon {
+    width: 4rem;
+    height: 4rem;
+}
+
 .app__section-card-container {
     display: flex;
     justify-content: center;
@@ -88,12 +96,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .app__card {
     border-radius: 3.2rem;
-    border: 0.2rem solid var(--azul-royal);
     background: var(--fundo-card-timer);
     padding: 2.4rem;
-    margin: 8rem 0;
+    margin: 5rem 0 8rem 0;
     width: 59rem;
     max-width: 90%;
+    box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 8px 10px rgba(0, 0, 0, 0.1),
+    0 12px 16px rgba(0, 0, 0, 0.1),
+    0 16px 24px rgba(0, 0, 0, 0.1);
 }
 
 .app__card-list {
@@ -122,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .app__card-button.active {
     border-radius: 0.8rem;
-    background: var(--azul-royal);
+    background: var(--red);
     font-weight: 600;
 }
 
@@ -252,30 +264,59 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Para Celulares */
-@media (max-width: 767px) {
-
-    .app__section-banner-container {
-        display: block;
-        width: 40rem;
-    }
+@media (max-width: 768px) {
 
     .app__title {
-        padding: 0 1em;
-        font-size: 2.6rem;
+        padding-bottom: 3rem;
+        font-size: 2rem;
     }
 
     .app__card-timer {
-        font-size: 6rem;
+        font-size: 5rem;
+        margin: 2rem;
+    }
+
+    .title-icon {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .app__card{
+        margin-top: 0;
+        margin-bottom: 5rem;
+        padding: 3rem;
     }
 
     .app__logo-figure{
         margin-top: 0em;
         padding: 0;
         align-items: center;
+        justify-content: center;
     }
 
     .app__logo-image {
-        height: 15em;
+        max-height: 10rem;
+    }
+
+    .app__card-button {
+        font-size: 1.6rem;
+        padding: 0.8rem;
+    }
+
+    .app__header {
+        order: 0;
+    }
+
+    .app__section-banner-container {
+        order: 2;
+    }
+
+    .app__section-card-container {
+        order: 1;
+    }
+
+    .app__footer {
+        order: 3;
     }
 
 }

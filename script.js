@@ -14,6 +14,7 @@ const beepAudio = new Audio('/sons/beep.mp3');
 const textStartPauseBt = document.querySelector('#start-pause > span');
 const tempoNaTela = document.querySelector('#timer');
 const startPauseImg = document.querySelector('.app__card-primary-butto-icon')
+const imagem = document.querySelector('.app__logo-image');
 
 let tempoDecorridoEmSegundos = 1500
 let intervaloId = null 
@@ -67,7 +68,7 @@ function alterarContexto(contexto) {
             break;
         case "descanso-longo":
             titulo.innerHTML = `
-            Hora do cafézinho ☕<br>
+            Hora do cafézinho <img src="/imagens/cup.svg" class="title-icon"><br>
                 <strong class="app__title-strong">Faça uma pausa longa.</strong>
             `
             break;
