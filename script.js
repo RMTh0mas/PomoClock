@@ -68,7 +68,7 @@ function alterarContexto(contexto) {
             break;
         case "descanso-longo":
             titulo.innerHTML = `
-            Hora do cafézinho <img src="/imagens/cup.svg" class="title-icon"><br>
+            Hora do cafézinho ☕<br>
                 <strong class="app__title-strong">Faça uma pausa longa.</strong>
             `
             break;

@@ -84,11 +84,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
-.title-icon {
-    width: 4rem;
-    height: 4rem;
-}
-
 .app__section-card-container {
     display: flex;
     justify-content: center;
@@ -274,11 +269,6 @@ h1, h2, h3, h4, h5, h6 {
     .app__card-timer {
         font-size: 5rem;
         margin: 2rem;
-    }
-
-    .title-icon {
-        width: 2rem;
-        height: 2rem;
     }
 
     .app__card{
