@@ -3,32 +3,31 @@
 :root {
     --color-primary: #EF4444;
     --color-secondary: #FFF;
-    --red: #EF4444;
+    --main-color: #EF4444;
     --fundo-card-timer:  rgba(68, 62, 62, 0.8);
-    --lils: #EF4444;
-    --faded-red: #eb6c6c;
+    --faded-color: #eb6c6c;
     --linear-botes: linear-gradient(180deg, #EF4444 0%, #ddaaa1 100%);
 }
 
 [data-contexto="foco"] {
     --main-bg-color: linear-gradient(to top, #EF4444 0%, #991B1B 48.44%, #01080E 100%);
-    --red: #EF4444;
-    --lils: #EF4444;
+    --main-color: #EF4444;
     --linear-botes: #EF4444;
+    --faded-color: #eb6c6c;
 }
 
 [data-contexto="descanso-curto"] {
     --main-bg-color: linear-gradient(to top, #0F725C 0%, #043220 48.44%, #01080E 100%);
-    --red: #0F725C;
-    --lils: #0F725C;
+    --main-color: #0F725C;
     --linear-botes: #0F725C;
+    --faded-color: #4dae99;
 }
 
 [data-contexto="descanso-longo"] {
     --main-bg-color: linear-gradient(to top, #1A4980 0%, #0D2B4E 48.44%, #01080E 100%);
-    --red: #2563EB;
-    --lils: #2563EB;
+    --main-color: #2563EB;
     --linear-botes: #2563EB;
+    --faded-color: #5e88e3;
 }
 
 * {
@@ -132,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .app__card-button.active {
     border-radius: 0.8rem;
-    background: var(--red);
+    background: var(--main-color);
     font-weight: 600;
 }
 
@@ -215,7 +214,6 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--fundo-card-timer);
     border: none;
     outline: none;
-    color: var(--color-secondary);
     font-size: 1.6rem;
 }
 
@@ -233,7 +231,7 @@ h1, h2, h3, h4, h5, h6 {
 .edit-input {
     font-size: 1.6rem; /* Tamanho da fonte */
     font-family: Montserrat, sans-serif; /* Fonte consistente */
-    color: var(--color-secondary); /* Cor do texto */
+    color: var(--main-color); /* Cor do texto */
     font-weight: 600;
     background-color: #fff; /* Fundo branco */
     border: 1px solid #ccc; /* Borda para destacar o campo */
@@ -247,17 +245,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .edit-input:focus {
-    color: var(--color-primary); /* Cor do texto */
+    color: var(--main-color); /* Cor do texto */
     background-color: #fff; /* Fundo branco */
     outline: none; /* Remove o contorno padrão */
-    border-color: var(--color-primary); /* Cor da borda ao focar */
-    box-shadow: 0 0 5px var(--color-primary); /* Destaque ao focar */
+    border-color: var(--main-color); /* Cor da borda ao focar */
+    box-shadow: 0 0 5px var(--main-color); /* Destaque ao focar */
 }
 
 
 .app__task-form button {
     padding: 0.2rem 0.4rem 0.1rem 0.4rem;
-    color: var(--color-primary);
+    color: var(--main-color);
     border: 2px solid var(--dark-red);
     cursor: pointer;
     outline: inherit;
@@ -270,7 +268,7 @@ h1, h2, h3, h4, h5, h6 {
 .app__task-form button:hover {
     transform: scale(1.1);
     color: var(--color-secondary);
-    background: var(--faded-red);
+    background: var(--faded-color);
 }
 
 .app__task > hr {
@@ -298,7 +296,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .app__task-item span {
-    color: var(--color-primary);
+    color: var(--main-color);
     font-size: 1.6rem;
     font-family: Montserrat;
     font-style: normal;
@@ -450,7 +448,7 @@ input[type="checkbox"] {
 }
 
 .toggle-checkbox:checked + .toggle-switch {
-    background: var(--lils);
+    background: var(--main-color);
 }
 
 .toggle-checkbox:checked + .toggle-switch:before {

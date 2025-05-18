@@ -197,6 +197,10 @@ function adicionarTarefa() {
 
     const taskText = input.value.trim();
 
+    if (!taskText) {
+        return alert('Digite uma tarefa!');
+    }
+
     if (taskText.length > MAX_LENGTH) {
         return alert(`Tarefa muito longa! Use até ${MAX_LENGTH} caracteres.`);
     }
