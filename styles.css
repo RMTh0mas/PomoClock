@@ -184,7 +184,6 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     align-items: center;
     text-align: start;
-    margin-bottom: 4rem;
 }
 
 .app__task-title {
@@ -199,6 +198,7 @@ h1, h2, h3, h4, h5, h6 {
 .app__task {
     width: 59rem;
     max-width: 90%;
+    margin-bottom: 10rem;
 }
 
 .app__task-form {
@@ -378,6 +378,21 @@ input[type="checkbox"] {
     cursor: pointer;
   }
 
+  .app__task-list-image {
+    padding-top: 4.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  #app__task-image {
+    width: 45%;
+    height: auto;
+    opacity: 0.8;
+}
+
 .app__footer {
     display: flex;
     width: 100%;
@@ -477,6 +492,14 @@ input[type="checkbox"] {
         margin-top: 0;
         margin-bottom: 3.5rem;
         padding: 3rem;
+    }
+
+    .app__task {
+        margin-bottom: 4em;
+    }
+
+    .app__task-list-image {
+        padding-top: 0;
     }
 
     .app__logo-figure{

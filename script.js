@@ -129,6 +129,8 @@ mostrarTempo()
 const input = document.getElementById('taskInput');
 const addBtn = document.getElementById('taskButton');
 const lista = document.querySelector('.app__task-list');
+const taskImage = document.getElementById('app__task-image');
+console.log(taskImage);
 const MAX_LENGTH = 50;
 
 if (!input || !addBtn || !lista) {
@@ -162,6 +164,29 @@ function saveToStorage(tasks) {
 function loadTasks() {
     const saved = JSON.parse(localStorage.getItem('tasks')) || [];
     saved.forEach(task => renderTask(task));
+
+    // Atualiza a visibilidade da imagem
+    toggleTaskImage();
+}
+
+function countTasks() {
+    const tasks = JSON.parse(localStorage.getItem('tasks'));
+    if (!tasks) {
+        return 0;
+    } 
+    return tasks.length;
+    
+}
+
+
+function toggleTaskImage() {
+    if (taskImage) {
+        if (countTasks() === 0) {    
+            taskImage.style.display = 'block'; // Mostra a imagem quando não há tarefas
+        } else {
+            taskImage.style.display = 'none'; // Oculta a imagem quando há tarefas
+        }
+    }
 }
 
 function adicionarTarefa() {
@@ -180,11 +205,16 @@ function adicionarTarefa() {
         const task = { id: Date.now(), text: taskText, completed: false };
         renderTask(task);
 
-        // salva no storage
+        // Salva no storage
         const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
         tasks.push(task);
         saveToStorage(tasks);
+
+        // Limpa o campo de entrada
         input.value = '';
+
+        // Atualiza a visibilidade da imagem
+        toggleTaskImage();
     } catch (error) {
         console.error('Erro ao adicionar tarefa:', error);
     }
@@ -325,6 +355,8 @@ function handleListClick(e) {
 
             // Atualiza o armazenamento local
             saveToStorage(tasks);
+
+            toggleTaskImage();
 
             // Remove o elemento <li> correspondente do DOM
             li.remove();

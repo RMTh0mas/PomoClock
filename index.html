@@ -25,7 +25,7 @@
     <main class="app">
         <header class="app__header">
             <figure class="app__logo-figure">
-                <img class="app__logo-image" src="/imagens/pomoclock.svg" alt="">
+                <img class="app__logo-image" src="/imagens/pomoclock.png" alt="">
             </figure>
         </header>
         <section class="app__section-banner-container">
@@ -73,12 +73,16 @@
             <div class="app__task">
                 <h2 class="app__task-title">Tarefas</h2>
                 <hr/>
-                <form class="app__task-form">
+                <div class="app__task-form">
                     <input type="text" placeholder="Adicione uma tarefa" id="taskInput" maxlength="50">
                     <button type="submit" id="taskButton"><i class="bi bi-plus"></i></button>
-                </form>
+                </div>
                 
                 <ul class="app__task-list"></ul>
+                <div class="app__task-list-image">
+                    <img src="/imagens/tasklist.png" alt="tasklist" id="app__task-image">
+                </div>
+                
             </div>
         </section>
         <footer class="app__footer">
